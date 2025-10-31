@@ -52,7 +52,6 @@ const App: React.FC = () => {
           return;
       }
 
-      // FIX: Handle the object returned from `processImageWithGemini` to construct a data URL with the correct mimeType.
       const result = await processImageWithGemini(originalImage.base64, prompt);
       if (result) {
         setProcessedImageUrl(`data:${result.mimeType};base64,${result.data}`);
